@@ -1,2 +1,8 @@
-# MysticalAgricultureTieredCrystals
+# Mystical Agriculture Tiered Crystals
+
 Tiered Crystals for the Mystical Agriculture mod for Minecraft.
+
+Issues:
+1. Forge Version
+2. Mystical Agriculture Version
+3. Mystical Agradditions Version (if installed)
