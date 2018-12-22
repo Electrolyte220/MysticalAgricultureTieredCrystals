@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Explain problems  with the mod
+about: Explain problems  with the mod.
 title: ''
 labels: bug
 assignees: ''
@@ -9,8 +9,7 @@ assignees: ''
 
 **What is the bug?**
 
-**To Reproduce**
-Steps to reproduce the behavior:
+**Steps to reproduce**
 
 **Version**
 Forge Ver:
