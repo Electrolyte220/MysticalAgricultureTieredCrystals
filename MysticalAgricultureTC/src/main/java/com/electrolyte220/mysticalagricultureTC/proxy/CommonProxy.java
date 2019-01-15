@@ -1,4 +1,4 @@
-package com.ilovepie220.mysticalagricultureTC.proxy;
+package com.electrolyte220.mysticalagricultureTC.proxy;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;

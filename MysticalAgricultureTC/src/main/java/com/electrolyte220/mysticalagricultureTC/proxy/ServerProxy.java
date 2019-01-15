@@ -1,4 +1,4 @@
-package com.ilovepie220.mysticalagricultureTC.proxy;
+package com.electrolyte220.mysticalagricultureTC.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;

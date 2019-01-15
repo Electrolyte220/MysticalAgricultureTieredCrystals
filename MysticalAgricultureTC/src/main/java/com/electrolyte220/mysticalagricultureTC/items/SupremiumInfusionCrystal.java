@@ -1,8 +1,9 @@
-package com.ilovepie220.mysticalagricultureTC.items;
+package com.electrolyte220.mysticalagricultureTC.items;
 
 import java.util.List;
 
-import com.ilovepie220.mysticalagricultureTC.ConfigMain;
+import com.electrolyte220.mysticalagricultureTC.ConfigMain;
+import com.electrolyte220.mysticalagricultureTC.ModChecker;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -10,19 +11,17 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class InferiumInfusionCrystal extends Item {
+public class SupremiumInfusionCrystal extends Item {
 
 	protected String name;
-	
-	public InferiumInfusionCrystal(String name) {
+	public SupremiumInfusionCrystal(String name) {
 		this.name = name;
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setMaxStackSize(1);
-		setMaxDamage(ConfigMain.infusiondurabilities.inferiumDurability);
+		setMaxDamage(ConfigMain.infusiondurabilities.supremiumDurability);
 		setNoRepair();
 	}
-	
 	public ItemStack getContainerItem(ItemStack itemstack) {
 		ItemStack stack = itemstack.copy();
 		if(ConfigMain.infusiondurabilities.enableInfusionDurability) {
@@ -30,7 +29,6 @@ public class InferiumInfusionCrystal extends Item {
 		}
 		return stack;
 	}
-	
 	@Override
 	public boolean hasContainerItem(ItemStack stack) {
 		return true;
@@ -38,18 +36,16 @@ public class InferiumInfusionCrystal extends Item {
 	
 	@Override
 	public void addInformation(ItemStack itemstack, World world, List<String> list, ITooltipFlag flagIn) {
-	list.add(ChatFormatting.GRAY + "Inferium -> Prudentium");
-	
+		if(ModChecker.isMysticalAgradditionsLoaded) {
+	list.add(ChatFormatting.GRAY + "Supremium -> Insanium");
+		}
 	if(ConfigMain.infusiondurabilities.enableInfusionDurability) {
-	list.add(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (this.maxDamage() - getDamage(itemstack)));
+	list.add(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (maxDamage() - getDamage(itemstack)));
+		} else if (!ConfigMain.infusiondurabilities.enableInfusionDurability) {
+			list.add(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited");
+		}
 	}
-	
-	else if (!ConfigMain.infusiondurabilities.enableInfusionDurability) {
-		list.add(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited");
-	}
-}
-	
 	private int maxDamage() {
-		return ConfigMain.infusiondurabilities.inferiumDurability;
+		return ConfigMain.infusiondurabilities.supremiumDurability;
 	}
 }

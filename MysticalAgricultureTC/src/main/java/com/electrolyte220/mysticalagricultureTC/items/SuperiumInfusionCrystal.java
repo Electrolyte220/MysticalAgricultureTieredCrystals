@@ -1,8 +1,8 @@
-package com.ilovepie220.mysticalagricultureTC.items;
+package com.electrolyte220.mysticalagricultureTC.items;
 
 import java.util.List;
 
-import com.ilovepie220.mysticalagricultureTC.ConfigMain;
+import com.electrolyte220.mysticalagricultureTC.ConfigMain;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.client.util.ITooltipFlag;

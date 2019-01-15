@@ -1,6 +1,6 @@
-package com.ilovepie220.mysticalagricultureTC.proxy;
+package com.electrolyte220.mysticalagricultureTC.proxy;
 
-import com.ilovepie220.mysticalagricultureTC.Main;
+import com.electrolyte220.mysticalagricultureTC.Main;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

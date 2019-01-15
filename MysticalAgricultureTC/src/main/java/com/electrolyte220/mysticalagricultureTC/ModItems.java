@@ -1,10 +1,10 @@
-package com.ilovepie220.mysticalagricultureTC;
+package com.electrolyte220.mysticalagricultureTC;
 
-import com.ilovepie220.mysticalagricultureTC.items.InferiumInfusionCrystal;
-import com.ilovepie220.mysticalagricultureTC.items.IntermediumInfusionCrystal;
-import com.ilovepie220.mysticalagricultureTC.items.PrudentiumInfusionCrystal;
-import com.ilovepie220.mysticalagricultureTC.items.SuperiumInfusionCrystal;
-import com.ilovepie220.mysticalagricultureTC.items.SupremiumInfusionCrystal;
+import com.electrolyte220.mysticalagricultureTC.items.InferiumInfusionCrystal;
+import com.electrolyte220.mysticalagricultureTC.items.IntermediumInfusionCrystal;
+import com.electrolyte220.mysticalagricultureTC.items.PrudentiumInfusionCrystal;
+import com.electrolyte220.mysticalagricultureTC.items.SuperiumInfusionCrystal;
+import com.electrolyte220.mysticalagricultureTC.items.SupremiumInfusionCrystal;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

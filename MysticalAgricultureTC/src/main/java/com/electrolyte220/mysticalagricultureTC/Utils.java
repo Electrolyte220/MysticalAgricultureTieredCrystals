@@ -1,4 +1,4 @@
-package com.ilovepie220.mysticalagricultureTC;
+package com.electrolyte220.mysticalagricultureTC;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

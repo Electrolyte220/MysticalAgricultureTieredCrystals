@@ -1,10 +1,10 @@
-package com.ilovepie220.mysticalagricultureTC;
+package com.electrolyte220.mysticalagricultureTC;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.ilovepie220.mysticalagricultureTC.proxy.ClientProxy;
-import com.ilovepie220.mysticalagricultureTC.proxy.CommonProxy;
+import com.electrolyte220.mysticalagricultureTC.proxy.ClientProxy;
+import com.electrolyte220.mysticalagricultureTC.proxy.CommonProxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

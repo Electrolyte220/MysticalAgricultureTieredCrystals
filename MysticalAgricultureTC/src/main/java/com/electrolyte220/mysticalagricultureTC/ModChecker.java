@@ -1,4 +1,4 @@
-package com.ilovepie220.mysticalagricultureTC;
+package com.electrolyte220.mysticalagricultureTC;
 
 import net.minecraftforge.fml.common.Loader;
 

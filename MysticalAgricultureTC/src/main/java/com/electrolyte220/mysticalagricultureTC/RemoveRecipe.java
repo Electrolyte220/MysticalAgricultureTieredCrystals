@@ -1,4 +1,4 @@
-package com.ilovepie220.mysticalagricultureTC;
+package com.electrolyte220.mysticalagricultureTC;
 
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
