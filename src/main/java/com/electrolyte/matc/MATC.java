@@ -9,14 +9,14 @@ import net.minecraftforge.fml.config.ModConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod("matc")
+@Mod(MATC.MOD_ID)
 public class MATC {
 
     public static final String MOD_ID = "matc";
     public static final Logger logger = LogManager.getFormatterLogger(MATC.MOD_ID);
 
     public MATC() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, MATCModConfig.SERVER_CONFIG);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MATCModConfig.COMMON_CONFIG);
 
         ModRegistry.init();
 
