@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    " # ",
+    "#C#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "mysticalagriculture:inferium_essence"
+    },
+    "C": {
+      "tag": "matc:inferium",
+      "data": 32767
+    }
+  },
+  "result": {
+    "item": "mysticalagriculture:prudentium_essence"
+  }
+}

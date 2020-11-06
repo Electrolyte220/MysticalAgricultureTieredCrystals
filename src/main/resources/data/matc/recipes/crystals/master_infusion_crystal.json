@@ -1,0 +1,29 @@
+{
+"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "mysticalagradditions" 
+		}
+	],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IPI",
+    "PCP",
+    "IPI"
+  ],
+  "key": {
+    "I":  {
+        "item": "mysticalagradditions:insanium_essence"
+      },
+    "P": {
+        "item": "mysticalagriculture:prosperity_shard"
+    },
+    "C": {
+        "item": "matc:supremium_crystal",
+        "data":  32767
+    }
+  },
+  "result": {
+    "item": "mysticalagriculture:master_infusion_crystal"
+  }
+}

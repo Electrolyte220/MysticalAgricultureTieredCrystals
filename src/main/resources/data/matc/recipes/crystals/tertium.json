@@ -1,0 +1,23 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ESE",
+    "SDS",
+    "ESE"  
+  ],
+  "key": {
+    "S":  {
+        "item": "mysticalagriculture:prosperity_shard"
+      },
+    "E": {
+        "item": "mysticalagriculture:tertium_essence"
+    },
+    "D": {
+        "item": "matc:prudentium_crystal",
+        "data":  32767
+    }
+  },
+  "result": {
+    "item": "matc:tertium_crystal"
+  }
+}
