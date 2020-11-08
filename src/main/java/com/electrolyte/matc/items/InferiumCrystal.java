@@ -51,13 +51,15 @@ public class InferiumCrystal extends Item {
 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn) {
-        list.add(new StringTextComponent(TextFormatting.GRAY + "Inferium -> Prudentium"));
+        if(MATCModConfig.UPGRADE_TOOLTIP.get()) {
+            list.add(new StringTextComponent(TextFormatting.GRAY + "Inferium -> Prudentium"));
+        }
 
-       if(MATCModConfig.INFERIUM_DURABILITY_ENABLED.get()) {
+       if(MATCModConfig.INFERIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
             list.add(new StringTextComponent(TextFormatting.GRAY + "Uses Left: " + TextFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
        }
 
-        else if (!MATCModConfig.INFERIUM_DURABILITY_ENABLED.get()) {
+        else if (!MATCModConfig.INFERIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
             list.add(new StringTextComponent(TextFormatting.GRAY + "Uses Left: " + TextFormatting.RED + "Unlimited"));
         }
     }

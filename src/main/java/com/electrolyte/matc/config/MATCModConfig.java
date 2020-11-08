@@ -6,7 +6,11 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber
 public class MATCModConfig {
 
+    public static ForgeConfigSpec CLIENT_CONFIG;
     public static ForgeConfigSpec COMMON_CONFIG;
+
+    public static ForgeConfigSpec.BooleanValue USES_TOOLTIP;
+    public static ForgeConfigSpec.BooleanValue UPGRADE_TOOLTIP;
 
     public static ForgeConfigSpec.IntValue INFERIUM_DURABILITY;
     public static ForgeConfigSpec.BooleanValue INFERIUM_DURABILITY_ENABLED;
@@ -20,6 +24,25 @@ public class MATCModConfig {
     public static ForgeConfigSpec.BooleanValue SUPREMIUM_DURABILITY_ENABLED;
 
     static {
+        ForgeConfigSpec.Builder CLIENT_BUILDER = new ForgeConfigSpec.Builder();
+
+        CLIENT_BUILDER.comment("Whether or not crystals should display 'Uses Left' tooltips").push("Uses Left Tooltips");
+        USES_TOOLTIP = CLIENT_BUILDER
+                .comment("Should crystals display 'Uses Left' on their tooltips?")
+                .translation("config.matc.uses_tooltip")
+                .define("usesTooltip", true);
+        CLIENT_BUILDER.pop();
+
+        CLIENT_BUILDER.comment("Whether or not crystals should display their upgrade tooltips").push("Upgrade Tooltips");
+        UPGRADE_TOOLTIP = CLIENT_BUILDER
+                .comment("Should crystals display upgrade tooltips?")
+                .translation("config.matc.upgrade_tooltip")
+                .define("upgradeTooltip", true);
+        CLIENT_BUILDER.pop();
+
+        CLIENT_CONFIG = CLIENT_BUILDER.build();
+
+
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
         COMMON_BUILDER.comment("Number of uses for each crystal").push("Uses");

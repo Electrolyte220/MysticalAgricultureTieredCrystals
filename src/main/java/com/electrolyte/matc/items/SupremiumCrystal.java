@@ -8,6 +8,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.ModList;
 
 import java.util.List;
 
@@ -51,13 +52,15 @@ public class SupremiumCrystal extends Item {
 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn) {
-        list.add(new StringTextComponent(TextFormatting.GRAY + "Supremium -> Insanium"));
+        if(MATCModConfig.UPGRADE_TOOLTIP.get() && ModList.get().isLoaded("mysticalagradditions")) {
+            list.add(new StringTextComponent(TextFormatting.GRAY + "Supremium -> Insanium"));
+        }
 
-       if(MATCModConfig.SUPREMIUM_DURABILITY_ENABLED.get()) {
+       if(MATCModConfig.SUPREMIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
             list.add(new StringTextComponent(TextFormatting.GRAY + "Uses Left: " + TextFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
        }
 
-        else if (!MATCModConfig.SUPREMIUM_DURABILITY_ENABLED.get()) {
+        else if (!MATCModConfig.SUPREMIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
             list.add(new StringTextComponent(TextFormatting.GRAY + "Uses Left: " + TextFormatting.RED + "Unlimited"));
         }
     }

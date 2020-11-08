@@ -51,13 +51,15 @@ public class TertiumCrystal extends Item {
 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn) {
-        list.add(new StringTextComponent(TextFormatting.GRAY + "Tertium -> Imperium"));
+        if(MATCModConfig.UPGRADE_TOOLTIP.get()) {
+            list.add(new StringTextComponent(TextFormatting.GRAY + "Tertium -> Imperium"));
+        }
 
-       if(MATCModConfig.TERTIUM_DURABILITY_ENABLED.get()) {
+       if(MATCModConfig.TERTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
             list.add(new StringTextComponent(TextFormatting.GRAY + "Uses Left: " + TextFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
        }
 
-        else if (!MATCModConfig.TERTIUM_DURABILITY_ENABLED.get()) {
+        else if (!MATCModConfig.TERTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
             list.add(new StringTextComponent(TextFormatting.GRAY + "Uses Left: " + TextFormatting.RED + "Unlimited"));
         }
     }

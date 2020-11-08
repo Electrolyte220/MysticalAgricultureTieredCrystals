@@ -16,6 +16,7 @@ public class MATC {
     public static final Logger logger = LogManager.getFormatterLogger(MATC.MOD_ID);
 
     public MATC() {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MATCModConfig.CLIENT_CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MATCModConfig.COMMON_CONFIG);
 
         ModRegistry.init();
