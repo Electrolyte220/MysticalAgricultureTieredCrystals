@@ -1,42 +1,21 @@
 package com.electrolyte.matc.items;
 
+import com.blakebr0.cucumber.item.BaseReusableItem;
 import com.electrolyte.matc.config.MATCModConfig;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 
 import java.util.List;
+import java.util.function.Function;
 
-public class PrudentiumCrystal extends Item {
+public class PrudentiumCrystal extends BaseReusableItem {
 
-    public PrudentiumCrystal(Properties properties) {
-        super(properties);
-    }
-
-    @Override
-    public boolean isDamageable() {
-        return true;
-    }
-
-    @Override
-    public boolean hasContainerItem(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public ItemStack getContainerItem(ItemStack itemStack) {
-        ItemStack item = itemStack.copy();
-        if(MATCModConfig.PRUDENTIUM_DURABILITY_ENABLED.get()) {
-            item.setDamage(item.getDamage() + 1);
-        }
-        if(item.getDamage() >= getMaxDamage(item)) {
-            item.shrink(1);
-        }
-        return item;
+    public PrudentiumCrystal(Function<Properties, Properties> properties) {
+        super(MATCModConfig.PRUDENTIUM_DURABILITY.get(), properties);
     }
 
     @Override
@@ -50,17 +29,22 @@ public class PrudentiumCrystal extends Item {
     }
 
     @Override
-    public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn) {
+    public boolean isBarVisible(ItemStack stack) {
+        return false;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Level worldIn, List<Component> list, TooltipFlag flagIn) {
         if(MATCModConfig.UPGRADE_TOOLTIP.get()) {
-            list.add(new StringTextComponent(TextFormatting.GRAY + "Prudentium -> Tertium"));
+            list.add(new TextComponent(ChatFormatting.GRAY + "Prudentium -> Tertium"));
         }
 
        if(MATCModConfig.PRUDENTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(new StringTextComponent(TextFormatting.GRAY + "Uses Left: " + TextFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
+            list.add(new TextComponent(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
        }
 
         else if (!MATCModConfig.PRUDENTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(new StringTextComponent(TextFormatting.GRAY + "Uses Left: " + TextFormatting.RED + "Unlimited"));
+            list.add(new TextComponent(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited"));
         }
     }
 }

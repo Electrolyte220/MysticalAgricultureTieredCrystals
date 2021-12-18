@@ -1,8 +1,8 @@
 package com.electrolyte.matc;
 
 import com.electrolyte.matc.config.MATCModConfig;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -23,10 +23,10 @@ public class MATC {
 
     }
 
-    public static final ItemGroup ITEM_GROUP = new ItemGroup("matc") {
+    public static final CreativeModeTab ITEM_GROUP = new CreativeModeTab("matc") {
 
         @Override
-        public ItemStack createIcon() {
+        public ItemStack makeIcon() {
             return new ItemStack(ModRegistry.SUPREMIUMCRYSTAL.get());
         }
     };
