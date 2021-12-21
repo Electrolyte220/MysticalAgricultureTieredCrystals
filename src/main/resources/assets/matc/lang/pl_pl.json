@@ -1,0 +1,8 @@
+{
+	"item.matc.inferium_crystal" : "§eKryształ infuzji z Inferium",
+	"item.matc.prudentium_crystal" : "§2Kryształ infuzji z Prudentium",
+	"item.matc.tertium_crystal" : "§6Kryształ infuzji z Tertium",
+	"item.matc.imperium_crystal" : "§9Kryształ infuzji z Imperium",
+	"item.matc.supremium_crystal" : "§cKryształ infuzji z Supremium",
+	"itemGroup.matc": "Mystical Agriculture Tiered Crystals"
+}
