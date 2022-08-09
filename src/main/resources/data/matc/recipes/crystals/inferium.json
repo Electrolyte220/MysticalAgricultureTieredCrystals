@@ -1,9 +1,9 @@
 { 
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ESE",
-    "SGS",
-    "ESE"  
+    "SES",
+    "EGE",
+    "SES"
   ],
   "key": {
     "S":  {

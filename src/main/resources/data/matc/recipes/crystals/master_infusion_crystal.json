@@ -7,9 +7,9 @@
 	],
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "IPI",
-    "PCP",
-    "IPI"
+    "PIP",
+    "ICI",
+    "PIP"
   ],
   "key": {
     "I":  {

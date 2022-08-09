@@ -4,7 +4,6 @@ import com.blakebr0.cucumber.item.BaseReusableItem;
 import com.electrolyte.matc.config.MATCModConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -15,7 +14,7 @@ import java.util.function.Function;
 public class TertiumCrystal extends BaseReusableItem {
 
     public TertiumCrystal(Function<Properties, Properties> properties) {
-        super(MATCModConfig.TERTIUM_DURABILITY.get(), properties);
+        super(MATCModConfig.TERTIUM_DURABILITY.getDefault(), properties);
     }
 
     @Override
@@ -36,15 +35,15 @@ public class TertiumCrystal extends BaseReusableItem {
     @Override
     public void appendHoverText(ItemStack stack, Level worldIn, List<Component> list, TooltipFlag flagIn) {
         if(MATCModConfig.UPGRADE_TOOLTIP.get()) {
-            list.add(new TextComponent(ChatFormatting.GRAY + "Tertium -> Imperium"));
+            list.add(Component.translatable(ChatFormatting.GRAY + "Tertium -> Imperium"));
         }
 
        if(MATCModConfig.TERTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(new TextComponent(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
+            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
        }
 
         else if (!MATCModConfig.TERTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(new TextComponent(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited"));
+            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited"));
         }
     }
 }
