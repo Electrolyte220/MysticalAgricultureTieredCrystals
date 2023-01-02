@@ -34,6 +34,11 @@ public class SupremiumCrystal extends BaseReusableItem {
     }
 
     @Override
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+        return MATCModConfig.SUPREMIUM_DURABILITY_ENABLED.get() ? super.getCraftingRemainingItem(stack) : stack.copy();
+    }
+
+    @Override
     public void appendHoverText(ItemStack stack, Level worldIn, List<Component> list, TooltipFlag flagIn) {
         if(MATCModConfig.UPGRADE_TOOLTIP.get() && ModList.get().isLoaded("mysticalagradditions")) {
             list.add(Component.translatable(ChatFormatting.GRAY + "Supremium -> Insanium"));
