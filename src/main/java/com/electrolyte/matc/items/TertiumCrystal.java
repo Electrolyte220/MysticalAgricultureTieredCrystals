@@ -34,6 +34,11 @@ public class TertiumCrystal extends BaseReusableItem {
     }
 
     @Override
+    public ItemStack getContainerItem(ItemStack stack) {
+        return MATCModConfig.TERTIUM_DURABILITY_ENABLED.get() ? super.getContainerItem(stack) : stack.copy();
+    }
+
+    @Override
     public void appendHoverText(ItemStack stack, Level worldIn, List<Component> list, TooltipFlag flagIn) {
         if(MATCModConfig.UPGRADE_TOOLTIP.get()) {
             list.add(new TextComponent(ChatFormatting.GRAY + "Tertium -> Imperium"));
