@@ -33,6 +33,11 @@ public class ImperiumCrystal extends BaseReusableItem {
     }
 
     @Override
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+        return MATCModConfig.IMPERIUM_DURABILITY_ENABLED.get() ? super.getCraftingRemainingItem(stack) : stack.copy();
+    }
+
+    @Override
     public void appendHoverText(ItemStack stack, Level worldIn, List<Component> list, TooltipFlag flagIn) {
         if(MATCModConfig.UPGRADE_TOOLTIP.get()) {
             list.add(Component.translatable(ChatFormatting.GRAY + "Imperium -> Supremium"));
