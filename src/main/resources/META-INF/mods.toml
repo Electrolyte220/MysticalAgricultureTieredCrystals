@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[44,)"
+loaderVersion="[45,)"
 license="MIT"
 issueTrackerURL="https://github.com/Electrolyte220/MysticalAgricultureTieredCrystals/"
 [[mods]]
@@ -13,34 +13,34 @@ description="Adds Tiered Crystals to Mystical Agriculture"
 [[dependencies.matc]]
     modId="forge"
     mandatory=true
-    versionRange="[44,)"
+    versionRange="[45,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.matc]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.3,1.20)"
+    versionRange="[1.19.4,1.20)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.matc]]
     modId="cucumber"
     mandatory=true
-    versionRange="[6.1.0,)"
+    versionRange="[6.2.0,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.matc]]
     modId="mysticalagriculture"
     mandatory=true
-    versionRange="[6.1.0,)"
+    versionRange="[6.2.0,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.matc]]
     modId="mysticalagradditions"
     mandatory=false
-    versionRange="[6.1.0,)"
+    versionRange="[6.2.0,)"
     ordering="AFTER"
     side="BOTH"

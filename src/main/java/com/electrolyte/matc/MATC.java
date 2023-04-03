@@ -29,7 +29,7 @@ public class MATC {
         event.registerCreativeModeTab(new ResourceLocation(MATC.MOD_ID), configurator -> {
             configurator.title(Component.translatable("matc.tab.title"));
             configurator.icon(() -> new ItemStack(ModRegistry.SUPREMIUMCRYSTAL.get()));
-            configurator.displayItems((featureFlagSet, output, p_260123_) ->
+            configurator.displayItems((displayParameters, output) ->
                     output.acceptAll(List.of(
                             new ItemStack(ModRegistry.INFERIUMCRYSTAL.get()),
                             new ItemStack(ModRegistry.PRUDENTIUMCRYSTAL.get()),

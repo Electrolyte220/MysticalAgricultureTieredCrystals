@@ -43,12 +43,11 @@ public class PrudentiumCrystal extends BaseReusableItem {
             list.add(Component.translatable(ChatFormatting.GRAY + "Prudentium -> Tertium"));
         }
 
-       if(MATCModConfig.PRUDENTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
-       }
-
-        else if (!MATCModConfig.PRUDENTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited"));
+        if(MATCModConfig.USES_TOOLTIP.get()) {
+            Component tooltip = (MATCModConfig.PRUDENTIUM_DURABILITY_ENABLED.get()) ?
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + (stack.getMaxDamage() - getDamage(stack))) :
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited");
+            list.add(tooltip);
         }
     }
 }

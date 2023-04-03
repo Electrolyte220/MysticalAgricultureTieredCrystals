@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '1.4.0'
+version = '1.5.0'
 group = 'com.electrolyte.matc' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'matc'
 
@@ -12,7 +12,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-    mappings channel: 'official', version: '1.19.3'
+    mappings channel: 'official', version: "${mc_version}"
     runs {
         client {
             workingDirectory project.file('run')
@@ -77,7 +77,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19.3-44.1.0'
+    minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
 
     implementation fg.deobf("com.blakebr0.cucumber:Cucumber:${mc_version}-${cucumber_version}")
     runtimeOnly fg.deobf("com.blakebr0.mysticalagriculture:MysticalAgriculture:${mc_version}-${myst_agri_version}")

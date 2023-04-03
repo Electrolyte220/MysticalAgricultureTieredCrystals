@@ -43,12 +43,11 @@ public class TertiumCrystal extends BaseReusableItem {
             list.add(Component.translatable(ChatFormatting.GRAY + "Tertium -> Imperium"));
         }
 
-       if(MATCModConfig.TERTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
-       }
-
-        else if (!MATCModConfig.TERTIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited"));
+        if(MATCModConfig.USES_TOOLTIP.get()) {
+            Component tooltip = (MATCModConfig.TERTIUM_DURABILITY_ENABLED.get()) ?
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + (stack.getMaxDamage() - getDamage(stack))) :
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited");
+            list.add(tooltip);
         }
     }
 }

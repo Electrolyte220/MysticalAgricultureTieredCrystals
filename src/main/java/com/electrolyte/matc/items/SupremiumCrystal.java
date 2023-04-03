@@ -44,12 +44,11 @@ public class SupremiumCrystal extends BaseReusableItem {
             list.add(Component.translatable(ChatFormatting.GRAY + "Supremium -> Insanium"));
         }
 
-       if(MATCModConfig.SUPREMIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
-       }
-
-        else if (!MATCModConfig.SUPREMIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited"));
+        if(MATCModConfig.USES_TOOLTIP.get()) {
+            Component tooltip = (MATCModConfig.SUPREMIUM_DURABILITY_ENABLED.get()) ?
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + (stack.getMaxDamage() - getDamage(stack))) :
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited");
+            list.add(tooltip);
         }
     }
 }

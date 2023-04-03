@@ -43,12 +43,11 @@ public class ImperiumCrystal extends BaseReusableItem {
             list.add(Component.translatable(ChatFormatting.GRAY + "Imperium -> Supremium"));
         }
 
-       if(MATCModConfig.IMPERIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "" + (stack.getMaxDamage() - getDamage(stack))));
-       }
-
-        else if (!MATCModConfig.IMPERIUM_DURABILITY_ENABLED.get() && MATCModConfig.USES_TOOLTIP.get()) {
-            list.add(Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited"));
+        if(MATCModConfig.USES_TOOLTIP.get()) {
+            Component tooltip = (MATCModConfig.IMPERIUM_DURABILITY_ENABLED.get()) ?
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + (stack.getMaxDamage() - getDamage(stack))) :
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited");
+            list.add(tooltip);
         }
     }
 }
