@@ -45,7 +45,7 @@ public class PrudentiumCrystal extends BaseReusableItem {
 
         if(MATCModConfig.USES_TOOLTIP.get()) {
             Component tooltip = (MATCModConfig.PRUDENTIUM_DURABILITY_ENABLED.get()) ?
-                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + (stack.getMaxDamage() + 1 - getDamage(stack))) :
+                    Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + (stack.getMaxDamage() - getDamage(stack))) :
                     Component.translatable(ChatFormatting.GRAY + "Uses Left: " + ChatFormatting.RED + "Unlimited");
             list.add(tooltip);
         }

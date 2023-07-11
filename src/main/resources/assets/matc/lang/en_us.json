@@ -4,5 +4,5 @@
 	"item.matc.tertium_crystal" : "§6Tertium Infusion Crystal",
 	"item.matc.imperium_crystal" : "§9Imperium Infusion Crystal",
 	"item.matc.supremium_crystal" : "§cSupremium Infusion Crystal",
-	"matc.tab.title": "Mystical Agriculture Tiered Crystals"
+	"itemGroup.matc": "Mystical Agriculture Tiered Crystals"
 }
