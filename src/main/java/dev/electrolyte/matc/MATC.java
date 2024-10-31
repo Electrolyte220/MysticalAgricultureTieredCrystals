@@ -5,6 +5,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -22,11 +23,13 @@ public class MATC {
     public static final String MOD_ID = "matc";
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MATC.MOD_ID);
 
-    public MATC(IEventBus bus, ModContainer container) {
+    public MATC(IEventBus bus, ModContainer container, Dist dist) {
         container.registerConfig(ModConfig.Type.CLIENT, MATCModConfig.CLIENT_CONFIG);
         container.registerConfig(ModConfig.Type.SERVER, MATCModConfig.SERVER_CONFIG);
 
-        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        if (dist == Dist.CLIENT) {
+            container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        }
 
         ModRegistry.register(bus);
         CREATIVE_MODE_TABS.register(bus);
