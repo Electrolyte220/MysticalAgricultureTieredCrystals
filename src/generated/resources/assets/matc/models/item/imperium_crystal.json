@@ -1,3 +1,6 @@
 {
-  "parent": "mysticalagriculture:item/infusion_crystal"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mysticalagriculture:item/infusion_crystal"
+  }
 }

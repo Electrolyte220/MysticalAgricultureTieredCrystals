@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": {
-      "item": "mysticalagriculture:prosperity_shard"
-    },
-    "G": {
-      "item": "matc:inferium_crystal"
-    },
-    "P": {
-      "item": "mysticalagriculture:prudentium_essence"
-    }
+    "E": "mysticalagriculture:prosperity_shard",
+    "G": "matc:inferium_crystal",
+    "P": "mysticalagriculture:prudentium_essence"
   },
   "pattern": [
     "PEP",
@@ -18,7 +12,6 @@
     "PEP"
   ],
   "result": {
-    "count": 1,
     "id": "matc:prudentium_crystal"
   }
 }

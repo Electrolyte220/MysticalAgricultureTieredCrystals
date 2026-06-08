@@ -8,15 +8,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": {
-      "item": "mysticalagriculture:prosperity_shard"
-    },
-    "G": {
-      "item": "matc:supremium_crystal"
-    },
-    "P": {
-      "item": "mysticalagradditions:insanium_essence"
-    }
+    "E": "mysticalagriculture:prosperity_shard",
+    "G": "matc:supremium_crystal",
+    "P": "mysticalagradditions:insanium_essence"
   },
   "pattern": [
     "PEP",
@@ -24,7 +18,6 @@
     "PEP"
   ],
   "result": {
-    "count": 1,
     "id": "mysticalagriculture:master_infusion_crystal"
   }
 }

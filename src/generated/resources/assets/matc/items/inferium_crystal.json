@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "matc:item/inferium_crystal",
+    "tints": [
+      {
+        "type": "matc:infusion_tint",
+        "color": 9091072
+      }
+    ]
+  }
+}

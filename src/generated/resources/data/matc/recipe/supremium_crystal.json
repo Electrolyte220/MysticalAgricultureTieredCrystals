@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": {
-      "item": "mysticalagriculture:prosperity_shard"
-    },
-    "G": {
-      "item": "matc:imperium_crystal"
-    },
-    "P": {
-      "item": "mysticalagriculture:supremium_essence"
-    }
+    "E": "mysticalagriculture:prosperity_shard",
+    "G": "matc:imperium_crystal",
+    "P": "mysticalagriculture:supremium_essence"
   },
   "pattern": [
     "PEP",
@@ -18,7 +12,6 @@
     "PEP"
   ],
   "result": {
-    "count": 1,
     "id": "matc:supremium_crystal"
   }
 }

@@ -8,12 +8,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": {
-      "item": "mysticalagriculture:supremium_essence"
-    },
-    "P": {
-      "tag": "matc:infusion_crystals/supremium"
-    }
+    "E": "mysticalagriculture:supremium_essence",
+    "P": "#matc:infusion_crystals/supremium"
   },
   "pattern": [
     " E ",
@@ -21,7 +17,6 @@
     " E "
   ],
   "result": {
-    "count": 1,
     "id": "mysticalagradditions:insanium_essence"
   }
 }

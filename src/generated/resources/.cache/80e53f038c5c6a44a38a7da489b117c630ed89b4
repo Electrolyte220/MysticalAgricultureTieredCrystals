@@ -1,4 +1,4 @@
-// 1.21.1	2024-08-22T00:06:56.0303884	Recipes
+// 26.1.2	2026-06-08T12:12:13.289079638	matc Recipes
 05529824afe975f2aae75f3a2fafae3b43553588 data/matc/advancement/recipes/misc/imperium_crystal.json
 5c4581e93b53568be64939bc9d17adcd51c2b35f data/matc/advancement/recipes/misc/imperium_essence.json
 2e4d687f68ea064bcc2074fe51dde9f2c6131f42 data/matc/advancement/recipes/misc/inferium_crystal.json
@@ -11,15 +11,15 @@ a3f39184a6fd0043b3eb81cf850cb23583262348 data/matc/advancement/recipes/misc/supr
 47642b971d96cb7455bb1a26ee2d418316b09b22 data/matc/advancement/recipes/misc/supremium_essence.json
 5f751224e7e0ffccd3cc60920813e5e7c672d31a data/matc/advancement/recipes/misc/tertium_crystal.json
 b36afc311d0952bc4682a642a6c335801c36476d data/matc/advancement/recipes/misc/tertium_essence.json
-255286d90a8dd228cba59d520397ce6c2c733fc9 data/matc/recipe/imperium_crystal.json
-024d0ec7ba20b17b9ac521d27cc48f699cc63ee7 data/matc/recipe/imperium_essence.json
-247a82577bee8f32839a8951175f76bc3875c270 data/matc/recipe/inferium_crystal.json
-deb16c060e2f59f40f685557c9c51f8af7b40765 data/matc/recipe/insanium_essence.json
-bff6e6ebc13cecb0ac8e40068da0da52d322c77e data/matc/recipe/master_infusion_crystal.json
-ae90a11cb0dc54ba94c8947c23bbaa4bf0166b44 data/matc/recipe/master_infusion_crystal_superium.json
-252ce275265ff620019cd9ba78b9dcc2a6dd4421 data/matc/recipe/prudentium_crystal.json
-e1c620a1f54c6c4951331e2d6e7a520c35167d0a data/matc/recipe/prudentium_essence.json
-187ec6a405f7d7a41812272532d54ad5d0a4adfe data/matc/recipe/supremium_crystal.json
-8eb0b027eaa757be70d481c42f9df1498dffaa01 data/matc/recipe/supremium_essence.json
-9f7bb7ff415bc9c4a61ae88f1eaddce2899ece63 data/matc/recipe/tertium_crystal.json
-e2033863134a75f7819e6b26a88d56a822bde39f data/matc/recipe/tertium_essence.json
+3545bd8dea2a7019eb920760f7915af080110793 data/matc/recipe/imperium_crystal.json
+dd7a42be1ef9ce1b01c90540f3cefcf3d68a8e2f data/matc/recipe/imperium_essence.json
+72ff3a82d845409a3876956e1c1374f31bd8119f data/matc/recipe/inferium_crystal.json
+f8259a4f63235ecdfd0e2a2703e2ea776cd250a9 data/matc/recipe/insanium_essence.json
+268ed66dd37f166a2c18d14ea47d2906ac553bf6 data/matc/recipe/master_infusion_crystal.json
+b7b521baae8aa06683b6a7f92b79f6dca4c6ea26 data/matc/recipe/master_infusion_crystal_superium.json
+2b6ca352e8d67f1df01c6d2b06dd233bdfb7251a data/matc/recipe/prudentium_crystal.json
+5757c033c0e339b25da04ed61f735f47df24a1bd data/matc/recipe/prudentium_essence.json
+b5e4fc025362631b7a08e0008f6a5b5f864783a0 data/matc/recipe/supremium_crystal.json
+da227f70a9ac07e796a80afaa8752459e3053861 data/matc/recipe/supremium_essence.json
+e074980c89057901776353beed01328a59ee9cfb data/matc/recipe/tertium_crystal.json
+be4d4e665a4f6cb765dc42f9117d25ae0ac79ca6 data/matc/recipe/tertium_essence.json

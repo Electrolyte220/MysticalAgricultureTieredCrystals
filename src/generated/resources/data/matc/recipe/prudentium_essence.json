@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": {
-      "item": "mysticalagriculture:inferium_essence"
-    },
-    "P": {
-      "tag": "matc:infusion_crystals/inferium"
-    }
+    "E": "mysticalagriculture:inferium_essence",
+    "P": "#matc:infusion_crystals/inferium"
   },
   "pattern": [
     " E ",
@@ -15,7 +11,6 @@
     " E "
   ],
   "result": {
-    "count": 1,
     "id": "mysticalagriculture:prudentium_essence"
   }
 }

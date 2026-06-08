@@ -7,22 +7,22 @@ import dev.electrolyte.matc.ModRegistry;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.data.tags.TagsProvider.TagLookup;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags.Items;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
 public class MATCItemTagsProvider extends ItemTagsProvider {
-    public MATCItemTagsProvider(PackOutput packOutput, CompletableFuture<Provider> provider, CompletableFuture<TagLookup<Block>> lookup) {
-        super(packOutput, provider, lookup);
+    public MATCItemTagsProvider(PackOutput packOutput, CompletableFuture<Provider> provider) {
+        super(packOutput, provider, MATC.MOD_ID);
     }
 
     @Override
@@ -42,18 +42,7 @@ public class MATCItemTagsProvider extends ItemTagsProvider {
 
         this.tag(Items.HIDDEN_FROM_RECIPE_VIEWERS).add(ModItems.INFUSION_CRYSTAL.get());
 
-        TagKey<Item> INFUSION_CRYSTALS = TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath(MysticalAgriculture.MOD_ID, "infusion_crystals"));
+        TagKey<Item> INFUSION_CRYSTALS = TagKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(MysticalAgriculture.MOD_ID, "infusion_crystals"));
         this.tag(INFUSION_CRYSTALS).remove(ModItems.INFUSION_CRYSTAL.get()).remove(ModItems.MASTER_INFUSION_CRYSTAL.get()).replace(true);
-    }
-
-    static class MATCBlockTagsProvider extends BlockTagsProvider {
-
-        public MATCBlockTagsProvider(PackOutput output, CompletableFuture<Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-            super(output, lookupProvider, MATC.MOD_ID, existingFileHelper);
-        }
-
-        @Override
-        protected void addTags(Provider provider) {
-        }
     }
 }

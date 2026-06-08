@@ -4,7 +4,7 @@ license="MIT"
 issueTrackerURL="https://github.com/Electrolyte220/MysticalAgricultureTieredCrystals/"
 [[mods]]
 modId="matc"
-version="1.7.0"
+version="1.8.0"
 displayName="Mystical Agriculture Tiered Crystals"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture-tiered-crystals"
 credits="BlakeBr0 for making Mystical Agriculture"
@@ -13,20 +13,20 @@ description="Adds Tiered Crystals to Mystical Agriculture"
 [[dependencies.matc]]
     modId="neoforge"
     mandatory=true
-    versionRange="[21,)"
+    versionRange="[26,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.matc]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.21,1.21.1)"
+    versionRange="[26.1.2]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.matc]]
     modId="mysticalagriculture"
     mandatory=true
-    versionRange="[8.0.0,)"
+    versionRange="[9.0.0,)"
     ordering="AFTER"
     side="BOTH"

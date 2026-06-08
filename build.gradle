@@ -3,21 +3,21 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.145'
+    id 'net.neoforged.gradle.userdev' version '7.1.36'
 }
 
 tasks.named('wrapper', Wrapper).configure {
     distributionType = Wrapper.DistributionType.BIN
 }
 
-version = '1.7.0'
+version = '1.8.0'
 group = 'dev.electrolyte.matc'
 
 base {
     archivesName = 'matc'
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 runs {
     configureEach {
@@ -28,20 +28,20 @@ runs {
     }
 
     client {
-        systemProperty 'forge.enabledGameTestNamespaces', 'matc'
+        systemProperty 'neoforge.enabledGameTestNamespaces', 'matc'
     }
 
     server {
-        systemProperty 'forge.enabledGameTestNamespaces', 'matc'
-        programArgument '--nogui'
+        systemProperty 'neoforge.enabledGameTestNamespaces', 'matc'
+        arguments '--nogui'
     }
 
     gameTestServer {
-        systemProperty 'forge.enabledGameTestNamespaces', 'matc'
+        systemProperty 'neoforge.enabledGameTestNamespaces', 'matc'
     }
 
-    data {
-        programArguments.addAll '--mod', 'matc', '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'mysticalagriculture', '--existing-mod', 'mysticalagradditions'
+    clientData {
+        arguments.addAll '--mod', 'matc', '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
     }
 }
 
@@ -67,8 +67,8 @@ dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"
 
     implementation "com.blakebr0.cucumber:Cucumber:${mc_version}-${cucumber_version}"
-    implementation "com.blakebr0.mysticalagriculture:MysticalAgriculture:${mc_version}-${myst_agri_version}"
-    localRuntime "com.blakebr0.mysticalagradditions:MysticalAgradditions:${mc_version}-${myst_agridditions_version}"
+    implementation ("com.blakebr0.mysticalagriculture:MysticalAgriculture:${mc_version}-${myst_agri_version}") {transitive = false}
+    localRuntime ("com.blakebr0.mysticalagradditions:MysticalAgradditions:${mc_version}-${myst_agridditions_version}") {transitive = false}
     localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
 }
 
